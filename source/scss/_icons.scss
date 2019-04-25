@@ -1,0 +1,180 @@
+#topperoo,
+.tpr-dialog {
+  i {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      border: 0;
+      font-family: 'icomoon' !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      height: auto;
+      outline: none;
+      text-indent: 0;
+      text-transform: none;
+      line-height: 1;
+      width: auto;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+
+      &.ico-pencil:before {
+          content: "\e905";
+      }
+      &.ico-camera:before {
+          content: "\e90f";
+      }
+      &.ico-copy:before {
+          content: "\e92c";
+      }
+      &.ico-qrcode:before {
+          content: "\e938";
+      }
+      &.ico-cart:before {
+          content: "\e93a";
+      }
+      &.ico-floppy-disk:before {
+          content: "\e962";
+      }
+      &.ico-spinner11:before {
+          content: "\e984";
+      }
+      &.ico-lock:before {
+          content: "\e98f";
+      }
+      &.ico-unlocked:before {
+          content: "\e990";
+      }
+      &.ico-link:before {
+          content: "\e9cb";
+      }
+      &.ico-cool:before {
+          content: "\e9eb";
+      }
+      &.ico-bin:before {
+          content: "\e9ac";
+      }
+      &.ico-hipster:before {
+          content: "\e9f9";
+      }
+      &.ico-warning:before {
+          content: "\ea07";
+      }
+      &.ico-notification:before {
+          content: "\ea08";
+      }
+      &.ico-question:before {
+          content: "\ea09";
+      }
+      &.ico-plus:before {
+          content: "\ea0a";
+      }
+      &.ico-minus:before {
+          content: "\ea0b";
+      }
+      &.ico-info:before {
+          content: "\ea0c";
+      }
+      &.ico-stop2:before {
+          content: "\ea1e";
+      }
+      &.ico-loop2:before {
+          content: "\ea2e";
+      }
+      &.ico-arrow-up2:before {
+          content: "\ea3a";
+      }
+      &.ico-arrow-up-right2:before {
+          content: "\ea3b";
+      }
+      &.ico-arrow-down-right2:before {
+          content: "\ea3d";
+      }
+      &.ico-arrow-down2:before {
+          content: "\ea3e";
+      }
+      &.ico-circle-up:before {
+          content: "\ea41";
+      }
+      &.ico-circle-right:before {
+          content: "\ea42";
+      }
+      &.ico-circle-down:before {
+          content: "\ea43";
+      }
+      &.ico-circle-left:before {
+          content: "\ea44";
+      }
+      &.ico-checkbox-checked:before {
+          content: "\ea52";
+      }
+      &.ico-checkbox-unchecked:before {
+          content: "\ea53";
+      }
+      &.ico-radio-checked:before {
+          content: "\ea54";
+      }
+      &.ico-radio-checked2:before {
+          content: "\ea55";
+      }
+      &.ico-radio-unchecked:before {
+          content: "\ea56";
+      }
+      &.ico-crop:before {
+          content: "\ea57";
+      }
+      &.ico-font-size:before {
+          content: "\ea61";
+      }
+      &.ico-bold:before {
+          content: "\ea62";
+      }
+      &.ico-underline:before {
+          content: "\ea63";
+      }
+      &.ico-italic:before {
+          content: "\ea64";
+      }
+      &.ico-strikethrough:before {
+          content: "\ea65";
+      }
+      &.ico-paragraph-left:before {
+          content: "\ea77";
+      }
+      &.ico-paragraph-center:before {
+          content: "\ea78";
+      }
+      &.ico-paragraph-right:before {
+          content: "\ea79";
+      }
+      &.ico-paragraph-justify:before {
+          content: "\ea7a";
+      }
+
+      &.material-icons {
+          font-family: 'Material Icons' !important;
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+
+          /* Support for all WebKit browsers. */
+          -webkit-font-smoothing: antialiased;
+          /* Support for Safari and Chrome. */
+          text-rendering: optimizeLegibility;
+
+          /* Support for Firefox. */
+          -moz-osx-font-smoothing: grayscale;
+
+          /* Support for IE. */
+          font-feature-settings: 'liga';
+      }
+  }
+}

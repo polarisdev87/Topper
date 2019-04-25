@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Topperoo Storefront</title>
+    <link rel="stylesheet" href="/css/midnightblue/main.css">
+</head>
+
+<body>
+    <div id="topperoo"></div>
+    <script>
+        window._tprcfg = {
+            data: {
+                savedTemplates: [
+                    {
+                        "id": "6a0b2cff8aa8ab692c2da2b5ea2e09cd",
+                        "name": "",
+                        "description": ""
+                    }, {
+                        "id": "aafbc4ca6cf71dba1afb422ffe2e096a",
+                        "name": "",
+                        "description": ""
+                    }, {
+                        "id": "b20c6f2abb62ac1fd0af1a944ec25259",
+                        "name": "",
+                        "description": ""
+                    }, {
+                        "id": "cc5164e9c162f7d4b4b8b467bf9168c4",
+                        "name": "",
+                        "description": ""
+                    }
+                ]
+            },
+            options: {
+                editor: true,
+                saveCustomTemplates: true,
+                forcePreviewBeforeSubmit: true,
+                tabsDisabled: []
+            }
+        };
+
+        window.tprSettings = {
+            tpriid: '67a4e858028b5f03fa1254342acafe44'
+        };
+
+        window.tprCallbacks = {
+            'topperoo.order.submit': function (data) {
+                console.log(data);
+            },
+            'topperoo.template.savingDenied': function () {
+                console.log('saving denied');
+            }
+        };
+    </script>
+    <script src="/js/topperoo.js"></script>
+</body>
+
+</html>
