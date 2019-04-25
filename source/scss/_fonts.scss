@@ -1,0 +1,785 @@
+/* icomoon (icons font) */
+@font-face {
+  font-family: 'icomoon';
+  src: url('#{$app_origin}/fonts/icomoon.ttf') format('truetype'),
+       url('#{$app_origin}/fonts/icomoon.woff') format('woff'),
+       url('#{$app_origin}/fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Open Sans (latin only) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/* Comic Sans */
+@font-face {
+    font-family: 'Comic Sans';
+    src: url('#{$app_origin}/fonts/comicsans.eot');
+    src: url('#{$app_origin}/fonts/comicsans.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/comicsans.woff') format('woff'),
+         url('#{$app_origin}/fonts/comicsans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comic Sans';
+    src: url('#{$app_origin}/fonts/comicsans_bold.eot');
+    src: url('#{$app_origin}/fonts/comicsans_bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/comicsans_bold.woff') format('woff'),
+         url('#{$app_origin}/fonts/comicsans_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comic Sans';
+    src: url('#{$app_origin}/fonts/comicsans_bold_italic.eot');
+    src: url('#{$app_origin}/fonts/comicsans_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/comicsans_bold_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/comicsans_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Comic Sans';
+    src: url('#{$app_origin}/fonts/comicsans_italic.eot');
+    src: url('#{$app_origin}/fonts/comicsans_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/comicsans_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/comicsans_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Impact */
+@font-face {
+    font-family: 'Impact';
+    src: url('#{$app_origin}/fonts/impact.eot');
+    src: url('#{$app_origin}/fonts/impact.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/impact.woff') format('woff'),
+         url('#{$app_origin}/fonts/impact.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Impact';
+    src: url('#{$app_origin}/fonts/impact_bold.eot');
+    src: url('#{$app_origin}/fonts/impact_bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/impact_bold.woff') format('woff'),
+         url('#{$app_origin}/fonts/impact_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Impact';
+    src: url('#{$app_origin}/fonts/impact_bold_italic.eot');
+    src: url('#{$app_origin}/fonts/impact_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/impact_bold_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/impact_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Impact';
+    src: url('#{$app_origin}/fonts/impact_italic.eot');
+    src: url('#{$app_origin}/fonts/impact_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/impact_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/impact_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Times New Roman */
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('#{$app_origin}/fonts/timesnewroman.eot');
+    src: url('#{$app_origin}/fonts/timesnewroman.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/timesnewroman.woff') format('woff'),
+         url('#{$app_origin}/fonts/timesnewroman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('#{$app_origin}/fonts/timesnewroman_bold.eot');
+    src: url('#{$app_origin}/fonts/timesnewroman_bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/timesnewroman_bold.woff') format('woff'),
+         url('#{$app_origin}/fonts/timesnewroman_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('#{$app_origin}/fonts/timesnewroman_bold_italic.eot');
+    src: url('#{$app_origin}/fonts/timesnewroman_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/timesnewroman_bold_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/timesnewroman_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('#{$app_origin}/fonts/timesnewroman_italic.eot');
+    src: url('#{$app_origin}/fonts/timesnewroman_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/timesnewroman_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/timesnewroman_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Segoe Script */
+@font-face {
+    font-family: 'Segoe Script';
+    src: url('#{$app_origin}/fonts/segoescript.eot');
+    src: url('#{$app_origin}/fonts/segoescript.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/segoescript.woff') format('woff'),
+         url('#{$app_origin}/fonts/segoescript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe Script';
+    src: url('#{$app_origin}/fonts/segoescript_bold.eot');
+    src: url('#{$app_origin}/fonts/segoescript_bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/segoescript_bold.woff') format('woff'),
+         url('#{$app_origin}/fonts/segoescript_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe Script';
+    src: url('#{$app_origin}/fonts/segoescript_bold_italic.eot');
+    src: url('#{$app_origin}/fonts/segoescript_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/segoescript_bold_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/segoescript_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Segoe Script';
+    src: url('#{$app_origin}/fonts/segoescript_italic.eot');
+    src: url('#{$app_origin}/fonts/segoescript_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/segoescript_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/segoescript_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Cloister Black */
+@font-face {
+    font-family: 'Cloister Black';
+    src: url('#{$app_origin}/fonts/cloisterblack.eot');
+    src: url('#{$app_origin}/fonts/cloisterblack.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/cloisterblack.woff') format('woff'),
+         url('#{$app_origin}/fonts/cloisterblack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cloister Black';
+    src: url('#{$app_origin}/fonts/cloisterblack_bold.eot');
+    src: url('#{$app_origin}/fonts/cloisterblack_bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/cloisterblack_bold.woff') format('woff'),
+         url('#{$app_origin}/fonts/cloisterblack_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cloister Black';
+    src: url('#{$app_origin}/fonts/cloisterblack_bold_italic.eot');
+    src: url('#{$app_origin}/fonts/cloisterblack_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/cloisterblack_bold_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/cloisterblack_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Cloister Black';
+    src: url('#{$app_origin}/fonts/cloisterblack_italic.eot');
+    src: url('#{$app_origin}/fonts/cloisterblack_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/cloisterblack_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/cloisterblack_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* New Shape */
+@font-face {
+    font-family: 'New Shape';
+    src: url('#{$app_origin}/fonts/newshape.eot');
+    src: url('#{$app_origin}/fonts/newshape.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/newshape.woff') format('woff'),
+         url('#{$app_origin}/fonts/newshape.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'New Shape';
+    src: url('#{$app_origin}/fonts/newshape_bold.eot');
+    src: url('#{$app_origin}/fonts/newshape_bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/newshape_bold.woff') format('woff'),
+         url('#{$app_origin}/fonts/newshape_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'New Shape';
+    src: url('#{$app_origin}/fonts/newshape_bold_italic.eot');
+    src: url('#{$app_origin}/fonts/newshape_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/newshape_bold_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/newshape_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'New Shape';
+    src: url('#{$app_origin}/fonts/newshape_italic.eot');
+    src: url('#{$app_origin}/fonts/newshape_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/newshape_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/newshape_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Verdana */
+@font-face {
+    font-family: 'Verdana';
+    src: url('#{$app_origin}/fonts/verdana.eot');
+    src: url('#{$app_origin}/fonts/verdana.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/verdana.woff') format('woff'),
+         url('#{$app_origin}/fonts/verdana.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Verdana';
+    src: url('#{$app_origin}/fonts/verdana_bold.eot');
+    src: url('#{$app_origin}/fonts/verdana_bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/verdana_bold.woff') format('woff'),
+         url('#{$app_origin}/fonts/verdana_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Verdana';
+    src: url('#{$app_origin}/fonts/verdana_bold_italic.eot');
+    src: url('#{$app_origin}/fonts/verdana_bold_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/verdana_bold_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/verdana_bold_italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Verdana';
+    src: url('#{$app_origin}/fonts/verdana_italic.eot');
+    src: url('#{$app_origin}/fonts/verdana_italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$app_origin}/fonts/verdana_italic.woff') format('woff'),
+         url('#{$app_origin}/fonts/verdana_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Sickness */
+@font-face {
+    font-family: 'Sickness';
+    src: url('#{$app_origin}/fonts/sickness.eot');
+    src: url('#{$app_origin}/fonts/sickness.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/sickness.woff') format('woff'),
+        url('#{$app_origin}/fonts/sickness.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Sickness';
+    src: url('#{$app_origin}/fonts/sickness.eot');
+    src: url('#{$app_origin}/fonts/sickness.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/sickness.woff') format('woff'),
+        url('#{$app_origin}/fonts/sickness.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Sickness';
+    src: url('#{$app_origin}/fonts/sickness.eot');
+    src: url('#{$app_origin}/fonts/sickness.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/sickness.woff') format('woff'),
+        url('#{$app_origin}/fonts/sickness.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Sickness';
+    src: url('#{$app_origin}/fonts/sickness.eot');
+    src: url('#{$app_origin}/fonts/sickness.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/sickness.woff') format('woff'),
+        url('#{$app_origin}/fonts/sickness.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* England */
+@font-face {
+    font-family: 'England';
+    src: url('#{$app_origin}/fonts/england.eot');
+    src: url('#{$app_origin}/fonts/england.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/england.woff') format('woff'),
+        url('#{$app_origin}/fonts/england.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'England';
+    src: url('#{$app_origin}/fonts/england.eot');
+    src: url('#{$app_origin}/fonts/england.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/england.woff') format('woff'),
+        url('#{$app_origin}/fonts/england.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'England';
+    src: url('#{$app_origin}/fonts/england.eot');
+    src: url('#{$app_origin}/fonts/england.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/england.woff') format('woff'),
+        url('#{$app_origin}/fonts/england.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'England';
+    src: url('#{$app_origin}/fonts/england.eot');
+    src: url('#{$app_origin}/fonts/england.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/england.woff') format('woff'),
+        url('#{$app_origin}/fonts/england.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Messy */
+@font-face {
+    font-family: 'Messy';
+    src: url('#{$app_origin}/fonts/messy.eot');
+    src: url('#{$app_origin}/fonts/messy.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/messy.woff') format('woff'),
+        url('#{$app_origin}/fonts/messy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Messy';
+    src: url('#{$app_origin}/fonts/messy.eot');
+    src: url('#{$app_origin}/fonts/messy.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/messy.woff') format('woff'),
+        url('#{$app_origin}/fonts/messy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Messy';
+    src: url('#{$app_origin}/fonts/messy.eot');
+    src: url('#{$app_origin}/fonts/messy.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/messy.woff') format('woff'),
+        url('#{$app_origin}/fonts/messy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Messy';
+    src: url('#{$app_origin}/fonts/messy.eot');
+    src: url('#{$app_origin}/fonts/messy.eot?#iefix') format('embedded-opentype'),
+        url('#{$app_origin}/fonts/messy.woff') format('woff'),
+        url('#{$app_origin}/fonts/messy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Pacifico */
+@font-face {
+    font-family: 'Pacifico';
+    src: url('#{$app_origin}/fonts/pacifico.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/pacifico.woff') format('woff'),
+        url('#{$app_origin}/fonts/pacifico.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url('#{$app_origin}/fonts/pacifico.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/pacifico.woff') format('woff'),
+        url('#{$app_origin}/fonts/pacifico.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url('#{$app_origin}/fonts/pacifico.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/pacifico.woff') format('woff'),
+        url('#{$app_origin}/fonts/pacifico.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url('#{$app_origin}/fonts/pacifico.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/pacifico.woff') format('woff'),
+        url('#{$app_origin}/fonts/pacifico.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Graduate */
+@font-face {
+    font-family: 'Graduate';
+    src: url('#{$app_origin}/fonts/graduate.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/graduate.woff') format('woff'),
+        url('#{$app_origin}/fonts/graduate.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Graduate';
+    src: url('#{$app_origin}/fonts/graduate.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/graduate.woff') format('woff'),
+        url('#{$app_origin}/fonts/graduate.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Graduate';
+    src: url('#{$app_origin}/fonts/graduate.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/graduate.woff') format('woff'),
+        url('#{$app_origin}/fonts/graduate.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Graduate';
+    src: url('#{$app_origin}/fonts/graduate.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/graduate.woff') format('woff'),
+        url('#{$app_origin}/fonts/graduate.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Londrina */
+@font-face {
+    font-family: 'Londrina';
+    src: url('#{$app_origin}/fonts/londrina.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/londrina.woff') format('woff'),
+        url('#{$app_origin}/fonts/londrina.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Londrina';
+    src: url('#{$app_origin}/fonts/londrina.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/londrina.woff') format('woff'),
+        url('#{$app_origin}/fonts/londrina.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Londrina';
+    src: url('#{$app_origin}/fonts/londrina.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/londrina.woff') format('woff'),
+        url('#{$app_origin}/fonts/londrina.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Londrina';
+    src: url('#{$app_origin}/fonts/londrina.woff2') format('woff2'),
+        url('#{$app_origin}/fonts/londrina.woff') format('woff'),
+        url('#{$app_origin}/fonts/londrina.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Bungee */
+@font-face {
+  font-family: 'Bungee';
+  src: url('#{$app_origin}/fonts/bungee.eot');
+  src: url('#{$app_origin}/fonts/bungee.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/bungee.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/bungee.woff') format('woff'),
+      url('#{$app_origin}/fonts/bungee.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  src: url('#{$app_origin}/fonts/bungee_bold.eot');
+  src: url('#{$app_origin}/fonts/bungee_bold.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/bungee_bold.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/bungee_bold.woff') format('woff'),
+      url('#{$app_origin}/fonts/bungee_bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  src: url('#{$app_origin}/fonts/bungee_bold_italic.eot');
+  src: url('#{$app_origin}/fonts/bungee_bold_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/bungee_bold_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/bungee_bold_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/bungee_bold_italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  src: url('#{$app_origin}/fonts/bungee_italic.eot');
+  src: url('#{$app_origin}/fonts/bungee_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/bungee_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/bungee_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/bungee_italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/* Luckiest Guy */
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('#{$app_origin}/fonts/luckiestguy.eot');
+  src: url('#{$app_origin}/fonts/luckiestguy.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/luckiestguy.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/luckiestguy.woff') format('woff'),
+      url('#{$app_origin}/fonts/luckiestguy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('#{$app_origin}/fonts/luckiestguy_bold.eot');
+  src: url('#{$app_origin}/fonts/luckiestguy_bold.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/luckiestguy_bold.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/luckiestguy_bold.woff') format('woff'),
+      url('#{$app_origin}/fonts/luckiestguy_bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('#{$app_origin}/fonts/luckiestguy_bold_italic.eot');
+  src: url('#{$app_origin}/fonts/luckiestguy_bold_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/luckiestguy_bold_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/luckiestguy_bold_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/luckiestguy_bold_italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('#{$app_origin}/fonts/luckiestguy_italic.eot');
+  src: url('#{$app_origin}/fonts/luckiestguy_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/luckiestguy_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/luckiestguy_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/luckiestguy_italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/* Old Typewriter */
+@font-face {
+  font-family: 'Old Typewriter';
+  src: url('#{$app_origin}/fonts/oldtypewriter.eot');
+  src: url('#{$app_origin}/fonts/oldtypewriter.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/oldtypewriter.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/oldtypewriter.woff') format('woff'),
+      url('#{$app_origin}/fonts/oldtypewriter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Old Typewriter';
+  src: url('#{$app_origin}/fonts/oldtypewriter_bold.eot');
+  src: url('#{$app_origin}/fonts/oldtypewriter_bold.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/oldtypewriter_bold.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/oldtypewriter_bold.woff') format('woff'),
+      url('#{$app_origin}/fonts/oldtypewriter_bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Old Typewriter';
+  src: url('#{$app_origin}/fonts/oldtypewriter_bold_italic.eot');
+  src: url('#{$app_origin}/fonts/oldtypewriter_bold_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/oldtypewriter_bold_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/oldtypewriter_bold_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/oldtypewriter_bold_italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Old Typewriter';
+  src: url('#{$app_origin}/fonts/oldtypewriter_italic.eot');
+  src: url('#{$app_origin}/fonts/oldtypewriter_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/oldtypewriter_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/oldtypewriter_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/oldtypewriter_italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/* Permanent Marker */
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('#{$app_origin}/fonts/permanentmarker.eot');
+  src: url('#{$app_origin}/fonts/permanentmarker.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/permanentmarker.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/permanentmarker.woff') format('woff'),
+      url('#{$app_origin}/fonts/permanentmarker.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('#{$app_origin}/fonts/permanentmarker_bold.eot');
+  src: url('#{$app_origin}/fonts/permanentmarker_bold.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/permanentmarker_bold.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/permanentmarker_bold.woff') format('woff'),
+      url('#{$app_origin}/fonts/permanentmarker_bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('#{$app_origin}/fonts/permanentmarker_bold_italic.eot');
+  src: url('#{$app_origin}/fonts/permanentmarker_bold_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/permanentmarker_bold_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/permanentmarker_bold_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/permanentmarker_bold_italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('#{$app_origin}/fonts/permanentmarker_italic.eot');
+  src: url('#{$app_origin}/fonts/permanentmarker_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/permanentmarker_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/permanentmarker_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/permanentmarker_italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/* Shojumaru */
+@font-face {
+  font-family: 'Shojumaru';
+  src: url('#{$app_origin}/fonts/shojumaru.eot');
+  src: url('#{$app_origin}/fonts/shojumaru.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/shojumaru.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/shojumaru.woff') format('woff'),
+      url('#{$app_origin}/fonts/shojumaru.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shojumaru';
+  src: url('#{$app_origin}/fonts/shojumaru_bold.eot');
+  src: url('#{$app_origin}/fonts/shojumaru_bold.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/shojumaru_bold.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/shojumaru_bold.woff') format('woff'),
+      url('#{$app_origin}/fonts/shojumaru_bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shojumaru';
+  src: url('#{$app_origin}/fonts/shojumaru_bold_italic.eot');
+  src: url('#{$app_origin}/fonts/shojumaru_bold_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/shojumaru_bold_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/shojumaru_bold_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/shojumaru_bold_italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Shojumaru';
+  src: url('#{$app_origin}/fonts/shojumaru_italic.eot');
+  src: url('#{$app_origin}/fonts/shojumaru_italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$app_origin}/fonts/shojumaru_italic.woff2') format('woff2'),
+      url('#{$app_origin}/fonts/shojumaru_italic.woff') format('woff'),
+      url('#{$app_origin}/fonts/shojumaru_italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$app_origin}/fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url('#{$app_origin}/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+    url('#{$app_origin}/fonts/MaterialIcons-Regular.woff') format('woff'),
+    url('#{$app_origin}/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
