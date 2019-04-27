@@ -8,10 +8,22 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var map = require("map-stream");
 
-function replaceUrl () {
+function replaceUrl1 () {
     return map((file, cb) => {
         let fileContents = file.contents.toString();
         fileContents = fileContents.replace(/https:\/\/app\.topperoo\.test/g, 'https://fe.topperoo.com');
+
+        // eslint-disable-next-line
+        file.contents = Buffer.from(fileContents);
+
+        cb(null, file);
+    });
+}
+
+function replaceUrl2 () {
+    return map((file, cb) => {
+        let fileContents = file.contents.toString();
+        fileContents = fileContents.replace(/https:\/\/app\.topperoo\.test/g, 'http://localhost:3000');
 
         // eslint-disable-next-line
         file.contents = Buffer.from(fileContents);
@@ -37,7 +49,7 @@ gulp.task('css', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }) ]))
-        .pipe(replaceUrl())
+        .pipe(replaceUrl2())
         .pipe(gulp.dest('./public/css/'));
 });
 
@@ -70,7 +82,7 @@ gulp.task('js', function() {
         './source/js/modules/viewport.js',
         './source/js/app.js'
     ]).pipe(concat('topperoo.js'))
-    .pipe(replaceUrl())
+    .pipe(replaceUrl1())
     .pipe(gulp.dest('./public/js/'));
 });
 
@@ -105,7 +117,7 @@ gulp.task('js-admin', function() {
         './source/js/modules/viewport.js',
         './source/js/admin/app.js'
     ]).pipe(concat('topperooadmin.js'))
-    .pipe(replaceUrl())
+    .pipe(replaceUrl1())
     .pipe(gulp.dest('./public/js/'));
 });
 
