@@ -10,7 +10,7 @@ export default function TemplatesPanel () {
     let hasDomEventListener = false;
 
     function onSidebarLayoutMenuClicked () {
-        let appBaseUrl = cache.get('APP_BASE_URL');
+        let appBaseUrl = cache.get('APP_API_URL');
         let jsonUrl = appBaseUrl + '/instances/' + cache.get('INSTANCE_ID') + '/products';
 
         let process_data = (data) => {
