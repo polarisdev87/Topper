@@ -1,0 +1,63 @@
+// Colors
+
+$white: #ffffff;
+$black: #000000;
+
+$grey: #333333;
+$grey-text: #ACACAC;
+
+$orange: #F4A250;
+$orange-light: #FFF3E6;
+
+$magenta: #991c3a;
+$magenta-light: #fbeceb;
+
+$main-font-color: $grey;
+$primary-color: $magenta;
+$secondary-color: $magenta-light;
+$border-color: #e9e9e9;
+
+// Fonts
+
+$font-family-main: 'Raleway', sans-serif;
+$default-font-size: 12px;
+
+$fs-extra-small: 10px;
+$fs-smaller: 12px;
+$fs-small: 13px;
+$fs-base: $default-font-size;
+$fs-large: 14px;
+
+$default-line-height: 1.2;
+
+
+// Space
+
+$space-base: 30px;
+$space-minimal: 10px;
+$space-large: 35px;
+$full-width: 100%;
+
+
+// Sizes
+
+$container: 1200px;
+$screen-lg: 1200px;
+$screen-md: 991px;
+$screen-sm: 769px;
+$screen-xs: 667px;
+
+$sidebar-width: 270px;
+$sidebar-margin: 30px;
+
+$app-container-height: 673px;
+
+// Borders
+
+$default-border: 1px solid $border-color;
+$border-bold: 3px solid #efefef;
+
+// Shadows
+
+$default-box-shadow: 2px 2px 8px 0 rgba(222, 222, 222, 1);
+

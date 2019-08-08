@@ -1,0 +1,93 @@
+.modal-open {
+    display: none;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    z-index: 1072;
+}
+
+.modal-dialog {
+    max-width: 400px;
+    margin: 1.75rem auto;
+    position: relative;
+    width: auto;
+    pointer-events: none;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+
+.modal-header {
+    position: relative;
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+        color: $grey-text;
+        cursor: pointer;
+        z-index: 1;
+    }
+}
+
+.modal-body {
+    position: relative;
+    padding: 40px;
+    color: $grey;
+
+    h3 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: inherit;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    input {
+        border-color: #c1c1c1;
+    }
+
+    @include placeholder {
+        color: $grey;
+    }
+}
+
+.modal-footer {
+    padding: 40px;
+}
+
+.modal-backdrop.show {
+    opacity: .7;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}

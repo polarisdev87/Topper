@@ -1,0 +1,325 @@
+<div><!-- Root node is required -->
+
+    <!-- The content of this block will be inserted into ".scroll-sidebar"  -->
+    <div id="desktop">
+        <div class="component-template sidebar-templates-component">
+            <div class="tabs">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab-content-1" aria-selected="true">Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" role="tab" aria-controls="tab-content-2" aria-selected="false">My collection</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel">
+                        <div class="template-list active">
+                            <div class="filters">
+                                <h4 class="filters-title"><i class="icon-Filter"></i> Filters</h4>
+
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-link">Sort By</a>
+                                    <div class="dropdown-box"></div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-link">Any types of shape</a>
+                                    <div class="dropdown-box"></div>
+                                </div>
+                            </div>
+
+                            <div class="templates-box">
+                                {{#product_list}}
+                                <div class="template-item {{#is_active}}active{{/is_active}}" data-product="{{ product_data }}">
+                                    <div class="template-image">
+                                        {{{product_thumbnail}}}
+                                        <div class="icon">
+                                            <span class="icon-Check-circle"><span class="path1"></span><span class="path2"></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="template-info">
+                                        {{#product_price}}<div class="price">{{#product_currency}}{{product_currency}}{{/product_currency}} {{product_price}}</div>{{/product_price}}
+                                        <p class="description">{{product_name}}</p>
+                                    </div>
+                                </div>
+                                {{/product_list}}
+                            </div>
+
+                            <a href="#" class="btn btn-secondary btn-block">OR Create Yours</a>
+                        </div>
+                        <div class="create-template">
+                            <div class="field">
+                                <div class="title">Template name:</div>
+                                <input type="text" placeholder="Type name here">
+                            </div>
+
+                            <div class="field">
+                                <div class="title">
+                                    Measurement unit:
+
+                                    <div class="custom-checkbox">
+                                        <input id="ch1" type="checkbox" checked>
+                                        <label for="ch1">in</label>
+                                    </div>
+
+                                    <div class="custom-checkbox">
+                                        <input id="ch2" type="checkbox">
+                                        <label for="ch2">cm</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="title"><strong>SHEET SIZE:</strong></div>
+                                <div class="sheet">
+                                    <svg width="38px" height="52px" viewBox="0 0 38 52" version="1.1">
+                                        <g class="svg-sheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                            <g transform="translate(-319.000000, -363.000000)" fill="#333333">
+                                                <g transform="translate(171.000000, 95.000000)">
+                                                    <g transform="translate(147.000000, 30.000000)">
+                                                        <g transform="translate(1.000000, 204.000000)">
+                                                            <g transform="translate(0.000000, 34.000000)">
+                                                                <g>
+                                                                    <path d="M36.7567806,6.8679 L31.1938568,1.2545 L30.5375002,0.592187882 C30.1619215,0.213201282 29.6504778,1.23425357e-15 29.1169141,1.33226763e-15 L29.0720098,0 L2,0 C0.8954305,2.02906125e-16 -1.3527075e-16,0.8954305 0,2 L0,50 C-3.78894842e-15,51.1045695 0.8954305,52 2,52 L36,52 C37.1045695,52 38,51.1045695 38,50 L38,9.009 L38,8.94554086 C38,8.41823719 37.7917584,7.91226889 37.4205862,7.53772874 L36.7567806,6.8679 Z M30.314585,2.1411 L35.878153,7.75515 L30.314585,7.75515 L30.314585,2.1411 Z M1.24321942,50.7455 L1.24321942,1.2545 L29.0720098,1.2545 L29.0720098,7.009 C29.0720098,8.1135695 29.9674403,9.009 31.0720098,9.009 L36.7574247,9.009 L36.7574247,50.7455 L1.24321942,50.7455 Z" id="Shape" fill-rule="nonzero"></path>
+                                                                    <text font-size="14" font-weight="normal">
+                                                                        <tspan x="10" y="31">A3</tspan>
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="sheet active">
+                                    <svg width="38px" height="52px" viewBox="0 0 38 52" version="1.1">
+                                        <g class="svg-sheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                            <g transform="translate(-319.000000, -363.000000)" fill="#333333">
+                                                <g transform="translate(171.000000, 95.000000)">
+                                                    <g transform="translate(147.000000, 30.000000)">
+                                                        <g transform="translate(1.000000, 204.000000)">
+                                                            <g transform="translate(0.000000, 34.000000)">
+                                                                <g>
+                                                                    <path d="M36.7567806,6.8679 L31.1938568,1.2545 L30.5375002,0.592187882 C30.1619215,0.213201282 29.6504778,1.23425357e-15 29.1169141,1.33226763e-15 L29.0720098,0 L2,0 C0.8954305,2.02906125e-16 -1.3527075e-16,0.8954305 0,2 L0,50 C-3.78894842e-15,51.1045695 0.8954305,52 2,52 L36,52 C37.1045695,52 38,51.1045695 38,50 L38,9.009 L38,8.94554086 C38,8.41823719 37.7917584,7.91226889 37.4205862,7.53772874 L36.7567806,6.8679 Z M30.314585,2.1411 L35.878153,7.75515 L30.314585,7.75515 L30.314585,2.1411 Z M1.24321942,50.7455 L1.24321942,1.2545 L29.0720098,1.2545 L29.0720098,7.009 C29.0720098,8.1135695 29.9674403,9.009 31.0720098,9.009 L36.7574247,9.009 L36.7574247,50.7455 L1.24321942,50.7455 Z" id="Shape" fill-rule="nonzero"></path>
+                                                                    <text font-size="14" font-weight="normal">
+                                                                        <tspan x="10" y="31">A3</tspan>
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="sheet">
+                                    <svg width="38px" height="52px" viewBox="0 0 38 52" version="1.1">
+                                        <g class="svg-sheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                            <g transform="translate(-319.000000, -363.000000)" fill="#333333">
+                                                <g transform="translate(171.000000, 95.000000)">
+                                                    <g transform="translate(147.000000, 30.000000)">
+                                                        <g transform="translate(1.000000, 204.000000)">
+                                                            <g transform="translate(0.000000, 34.000000)">
+                                                                <g>
+                                                                    <path d="M36.7567806,6.8679 L31.1938568,1.2545 L30.5375002,0.592187882 C30.1619215,0.213201282 29.6504778,1.23425357e-15 29.1169141,1.33226763e-15 L29.0720098,0 L2,0 C0.8954305,2.02906125e-16 -1.3527075e-16,0.8954305 0,2 L0,50 C-3.78894842e-15,51.1045695 0.8954305,52 2,52 L36,52 C37.1045695,52 38,51.1045695 38,50 L38,9.009 L38,8.94554086 C38,8.41823719 37.7917584,7.91226889 37.4205862,7.53772874 L36.7567806,6.8679 Z M30.314585,2.1411 L35.878153,7.75515 L30.314585,7.75515 L30.314585,2.1411 Z M1.24321942,50.7455 L1.24321942,1.2545 L29.0720098,1.2545 L29.0720098,7.009 C29.0720098,8.1135695 29.9674403,9.009 31.0720098,9.009 L36.7574247,9.009 L36.7574247,50.7455 L1.24321942,50.7455 Z" id="Shape" fill-rule="nonzero"></path>
+                                                                    <text font-size="14" font-weight="normal">
+                                                                        <tspan x="10" y="31">A3</tspan>
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="sheet">
+                                    <svg width="38px" height="52px" viewBox="0 0 38 52" version="1.1">
+                                        <g class="svg-sheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                            <g transform="translate(-319.000000, -363.000000)" fill="#333333">
+                                                <g transform="translate(171.000000, 95.000000)">
+                                                    <g transform="translate(147.000000, 30.000000)">
+                                                        <g transform="translate(1.000000, 204.000000)">
+                                                            <g transform="translate(0.000000, 34.000000)">
+                                                                <g>
+                                                                    <path d="M36.7567806,6.8679 L31.1938568,1.2545 L30.5375002,0.592187882 C30.1619215,0.213201282 29.6504778,1.23425357e-15 29.1169141,1.33226763e-15 L29.0720098,0 L2,0 C0.8954305,2.02906125e-16 -1.3527075e-16,0.8954305 0,2 L0,50 C-3.78894842e-15,51.1045695 0.8954305,52 2,52 L36,52 C37.1045695,52 38,51.1045695 38,50 L38,9.009 L38,8.94554086 C38,8.41823719 37.7917584,7.91226889 37.4205862,7.53772874 L36.7567806,6.8679 Z M30.314585,2.1411 L35.878153,7.75515 L30.314585,7.75515 L30.314585,2.1411 Z M1.24321942,50.7455 L1.24321942,1.2545 L29.0720098,1.2545 L29.0720098,7.009 C29.0720098,8.1135695 29.9674403,9.009 31.0720098,9.009 L36.7574247,9.009 L36.7574247,50.7455 L1.24321942,50.7455 Z" id="Shape" fill-rule="nonzero"></path>
+                                                                    <text font-size="14" font-weight="normal">
+                                                                        <tspan x="10" y="31">A3</tspan>
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="sheet">
+                                    <svg width="38px" height="52px" viewBox="0 0 38 52" version="1.1">
+                                        <g class="svg-sheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                            <g transform="translate(-319.000000, -363.000000)" fill="#333333">
+                                                <g transform="translate(171.000000, 95.000000)">
+                                                    <g transform="translate(147.000000, 30.000000)">
+                                                        <g transform="translate(1.000000, 204.000000)">
+                                                            <g transform="translate(0.000000, 34.000000)">
+                                                                <g>
+                                                                    <path d="M36.7567806,6.8679 L31.1938568,1.2545 L30.5375002,0.592187882 C30.1619215,0.213201282 29.6504778,1.23425357e-15 29.1169141,1.33226763e-15 L29.0720098,0 L2,0 C0.8954305,2.02906125e-16 -1.3527075e-16,0.8954305 0,2 L0,50 C-3.78894842e-15,51.1045695 0.8954305,52 2,52 L36,52 C37.1045695,52 38,51.1045695 38,50 L38,9.009 L38,8.94554086 C38,8.41823719 37.7917584,7.91226889 37.4205862,7.53772874 L36.7567806,6.8679 Z M30.314585,2.1411 L35.878153,7.75515 L30.314585,7.75515 L30.314585,2.1411 Z M1.24321942,50.7455 L1.24321942,1.2545 L29.0720098,1.2545 L29.0720098,7.009 C29.0720098,8.1135695 29.9674403,9.009 31.0720098,9.009 L36.7574247,9.009 L36.7574247,50.7455 L1.24321942,50.7455 Z" id="Shape" fill-rule="nonzero"></path>
+                                                                    <text font-size="14" font-weight="normal">
+                                                                        <tspan x="10" y="31">A3</tspan>
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="sheet">
+                                    <svg width="38px" height="52px" viewBox="0 0 38 52" version="1.1">
+                                        <g class="svg-sheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                            <g transform="translate(-319.000000, -363.000000)" fill="#333333">
+                                                <g transform="translate(171.000000, 95.000000)">
+                                                    <g transform="translate(147.000000, 30.000000)">
+                                                        <g transform="translate(1.000000, 204.000000)">
+                                                            <g transform="translate(0.000000, 34.000000)">
+                                                                <g>
+                                                                    <path d="M36.7567806,6.8679 L31.1938568,1.2545 L30.5375002,0.592187882 C30.1619215,0.213201282 29.6504778,1.23425357e-15 29.1169141,1.33226763e-15 L29.0720098,0 L2,0 C0.8954305,2.02906125e-16 -1.3527075e-16,0.8954305 0,2 L0,50 C-3.78894842e-15,51.1045695 0.8954305,52 2,52 L36,52 C37.1045695,52 38,51.1045695 38,50 L38,9.009 L38,8.94554086 C38,8.41823719 37.7917584,7.91226889 37.4205862,7.53772874 L36.7567806,6.8679 Z M30.314585,2.1411 L35.878153,7.75515 L30.314585,7.75515 L30.314585,2.1411 Z M1.24321942,50.7455 L1.24321942,1.2545 L29.0720098,1.2545 L29.0720098,7.009 C29.0720098,8.1135695 29.9674403,9.009 31.0720098,9.009 L36.7574247,9.009 L36.7574247,50.7455 L1.24321942,50.7455 Z" id="Shape" fill-rule="nonzero"></path>
+                                                                    <text font-size="14" font-weight="normal">
+                                                                        <tspan x="10" y="31">A3</tspan>
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <a href="#" class="btn btn-secondary btn-block">OR Create new size</a>
+                            </div>
+
+                            <div class="field">
+                                <div class="title">Margins</div>
+                                <div class="input-group">
+                                    <div class="fs-extra-small">Top (in)</div>
+                                    <div class="custom-range">
+                                        <div class="number-indicator">
+                                            <span class="indicator">0.82</span>
+                                            <button><i class="icon-Edit-icon"></i></button>
+                                        </div>
+                                        <input type="range">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="fs-extra-small">Left (in)</div>
+                                    <div class="custom-range">
+                                        <div class="number-indicator">
+                                            <span class="indicator">0.82</span>
+                                            <button><i class="icon-Edit-icon"></i></button>
+                                        </div>
+                                        <input type="range">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="title"><strong>TOPPERS:</strong></div>
+                            </div>
+
+                            <div class="field">
+                                <div class="title">Shape:</div>
+
+                                <div class="shape shape-rect"></div>
+                                <div class="shape shape-circle"></div>
+                                <div class="shape shape-heart active">
+                                    <svg width="47px" height="38px" viewBox="0 0 47 38" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                            <g transform="translate(-450.000000, -872.000000)" fill="#FFFFFF" stroke="#333333">
+                                                <g transform="translate(171.000000, 95.000000)">
+                                                    <g transform="translate(147.000000, 30.000000)">
+                                                        <g transform="translate(1.000000, 670.000000)">
+                                                            <g transform="translate(0.000000, 44.000000)">
+                                                                <g transform="translate(0.000000, 34.000000)">
+                                                                    <path d="M170.383402,1.01780615 C164.650587,-1.52422293 157.152592,0.866824314 154.499999,6.34836269 C151.847407,0.866824314 144.349411,-1.52730465 138.616596,1.01780523 C132.51081,3.73238445 129.591351,10.6651904 134.414247,18.8428204 C137.594898,24.249223 143.058603,28.4167942 152.307586,35.2816171 C153.598109,36.2394732 155.401915,36.2394622 156.692411,35.2815768 C165.941395,28.4163868 171.405102,24.2463634 174.585754,18.8428205 C179.408648,10.6651904 176.48919,3.73238445 170.383402,1.01780615 Z" id="Path"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="title">Number of toppers:</div>
+                                <div class="input-group">
+                                    <div class="fs-extra-small">Rows</div>
+                                    <div class="custom-range">
+                                        <div class="number-indicator">
+                                            <span class="indicator">0.82</span>
+                                            <button><i class="icon-Edit-icon"></i></button>
+                                        </div>
+                                        <input type="range">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="fs-extra-small">Columns</div>
+                                    <div class="custom-range">
+                                        <div class="number-indicator">
+                                            <span class="indicator">0.82</span>
+                                            <button><i class="icon-Edit-icon"></i></button>
+                                        </div>
+                                        <input type="range">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="title">Spacing:</div>
+                                <div class="input-group">
+                                    <div class="fs-extra-small">Horizontal (in)</div>
+                                    <div class="custom-range">
+                                        <div class="number-indicator">
+                                            <span class="indicator">0.82</span>
+                                            <button><i class="icon-Edit-icon"></i></button>
+                                        </div>
+                                        <input type="range">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="fs-extra-small">Vertical (in)</div>
+                                    <div class="custom-range">
+                                        <div class="number-indicator">
+                                            <span class="indicator">0.82</span>
+                                            <button><i class="icon-Edit-icon"></i></button>
+                                        </div>
+                                        <input type="range">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel">
+                        <div class="active">
+                            Collection
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

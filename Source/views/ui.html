@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Topperoo</title>
+    <link href="/css/topperoo.css" rel="stylesheet">
+</head>
+
+<body id="topperoo">
+
+<div class="app">
+    <div class="container">
+        <div class="app-container">
+
+            <aside class="app-sidebar">
+                //= partials/_sidebar.html
+
+                <div class="scroll-sidebar box desktop-only">
+                    <!-- Mustache render template  -->
+                </div>
+
+            </aside>
+
+            <main class="app-workspace">
+                //= partials/_workspace.html
+            </main>
+        </div>
+    </div>
+
+    <div class="app-mobile-tab open">
+        <!-- Mustache render template  -->
+    </div>
+</div>
+
+//= partials/_footer.html
+
+<div id="loader"><span class="spinner"></span></div>
+
+<script src="/js/vendor.js"></script>
+<script src="/js/topperoo.js"></script>
+
+</body>
+</html>

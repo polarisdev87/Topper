@@ -1,0 +1,92 @@
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin hover-all {
+    &:hover {
+        @content;
+    }
+
+    &:active {
+        @content;
+    }
+
+    &:focus {
+        @content;
+    }
+}
+
+@mixin min1199 {
+    @media (min-width: 1199px) {
+        @content;
+    }
+}
+
+
+@mixin min991 {
+    @media (min-width: 991px) {
+        @content;
+    }
+}
+
+@mixin min768 {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin min640 {
+    @media (min-width: 640px) {
+        @content;
+    }
+}
+
+@mixin min320 {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+
+@mixin max360 {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
+@mixin max320 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin media($resolutions) {
+    @media (min-width: $resolutions) {
+        @content;
+    }
+}
+
+@mixin background-gradient($firstColor, $secondColor) {
+    background: $firstColor;
+    background: -moz-linear-gradient(left, $firstColor 0%, $secondColor 100%);
+    background: -webkit-linear-gradient(left, $firstColor 0%, $secondColor 100%);
+    background: linear-gradient(to right, $firstColor 0%, $secondColor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$firstColor, endColorstr=$secondColor, GradientType=1);
+}
+
+
+@mixin placeholder {
+    input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @content;
+    }
+    input::-moz-placeholder { /* Firefox 19+ */
+        @content;
+    }
+    input:-ms-input-placeholder { /* IE 10+ */
+        @content;
+    }
+    input:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+}

@@ -1,0 +1,58 @@
+input[type="text"], input[type="email"] {
+    display: block;
+    width: 100%;
+    font-size: 10px;
+    border: none;
+    border-bottom: $default-border;
+    padding-bottom: 5px;
+
+    &:focus, &:active {
+        outline: none;
+        border-color: $primary-color;
+    }
+}
+
+@include placeholder {
+    color: $grey-text;
+}
+
+.form-search {
+    position: relative;
+
+    i.icon-search {
+        position: absolute;
+        right: 0;
+        top: 30%;
+        transform: translateY(-50%);
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: $default-border;
+        padding-bottom: 10px;
+        padding-right: 20px;
+
+        &:focus, &:active {
+            outline: none;
+            border-color: $primary-color;
+        }
+    }
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+    color: $grey;
+    resize: none;
+    min-height: 80px;
+
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+    }
+}

@@ -1,9 +1,13 @@
+/public/js/*
+/public/css/*
+/public/fonts/*
+/public/img/*
+/public/views/*
+/public/templates/*
+
 /node_modules
-/public/*
 
-!/public/index.html
-
-*.log
+package-lock.json
 
 # OS generated files #
 ######################
@@ -15,7 +19,6 @@
 Icon?
 ehthumbs.db
 Thumbs.db
-.directory
 
 # Tool specific files #
 #######################
@@ -36,5 +39,3 @@ Thumbs.db
 nbproject/*
 # Visual Studio Code
 .vscode
-# Sass preprocessor
-.sass-cache/

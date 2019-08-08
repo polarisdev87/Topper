@@ -1,0 +1,78 @@
+.workspace-content {
+    padding: 10px;
+
+    .workspace-notification {
+        display: inline-block;
+        background: $secondary-color;
+        border-radius: 3px;
+        font-size: 8px;
+        padding: 6px;
+    }
+
+    .main-template {
+        position: relative;
+        max-width: 251px;
+        width: 100%;
+        height: 320px;
+        margin: 0 auto 30px;
+
+        @include min991 {
+            max-width: 308px;
+            height: 436px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.workspace-content-header {
+    .title {
+        @include min991 {
+            display: none;
+        }
+    }
+
+    .d-flex-item.right {
+        @include min991 {
+            text-align: left;
+        }
+    }
+}
+
+.workspace-tools {
+    box-shadow: $default-box-shadow;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding: 13px 6px;
+
+    @include min991 {
+        display: none;
+    }
+
+    button {
+        color: $primary-color;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .btn-share {
+        text-transform: uppercase;
+        font-weight: 700;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+
+.workspace-actions {
+    margin-bottom: 20px;
+
+    @include min991 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

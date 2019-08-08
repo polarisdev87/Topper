@@ -1,0 +1,38 @@
+.custom-radio-circle {
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"] + label {
+        display: block;
+        width: 41px;
+        height: 41px;
+        border: $border-bold;
+        border-radius: 50%;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    input[type="radio"]:checked + label {
+
+    }
+}
+
+.custom-radio-image {
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"] + label {
+        display: block;
+        width: 91px;
+        height: 91px;
+        border: $border-bold;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    input[type="radio"]:checked + label {
+
+    }
+}

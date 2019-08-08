@@ -1,0 +1,41 @@
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.chevron-arrow-down {
+    display: inline-block;
+    border-right: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+}
+
+.chevron-arrow-right {
+    display: inline-block;
+    border-right: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    width: 6px;
+    height: 6px;
+    transform: rotate(-45deg);
+}
+
+.hide {
+    display: none;
+}

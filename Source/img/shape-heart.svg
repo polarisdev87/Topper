@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="38px" viewBox="0 0 47 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+        <g id="2_Topperoo_NewTemplate_1024" transform="translate(-450.000000, -872.000000)" fill="#FFFFFF" stroke="#333333">
+            <g id="Sidebar" transform="translate(171.000000, 95.000000)">
+                <g id="Scroll-sidebar" transform="translate(147.000000, 30.000000)">
+                    <g id="Toppers" transform="translate(1.000000, 670.000000)">
+                        <g id="Shape" transform="translate(0.000000, 44.000000)">
+                            <g id="Shapes" transform="translate(0.000000, 34.000000)">
+                                <path d="M170.383402,1.01780615 C164.650587,-1.52422293 157.152592,0.866824314 154.499999,6.34836269 C151.847407,0.866824314 144.349411,-1.52730465 138.616596,1.01780523 C132.51081,3.73238445 129.591351,10.6651904 134.414247,18.8428204 C137.594898,24.249223 143.058603,28.4167942 152.307586,35.2816171 C153.598109,36.2394732 155.401915,36.2394622 156.692411,35.2815768 C165.941395,28.4163868 171.405102,24.2463634 174.585754,18.8428205 C179.408648,10.6651904 176.48919,3.73238445 170.383402,1.01780615 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

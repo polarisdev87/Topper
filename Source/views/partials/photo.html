@@ -1,0 +1,73 @@
+<div><!-- Root node is required -->
+
+    <!-- The content of this block will be inserted into ".scroll-sidebar"  -->
+    <div id="desktop">
+        <div class="component-template sidebar-photo-component">
+            <div class="field">
+                <h3>Add photo(s)</h3>
+            </div>
+
+            <div class="field">
+                <form class="drag-and-drop-area" method="POST" enctype="multipart/form-data" action="/images/upload">
+                    <label>
+                        <input type="file" name="files[]" accept="image/*" multiple>
+                        <span class="choose-file">Drag and <br>drop it here</span><span class="drag-it-here"></span>
+                        <span class="on-uploading">Uploading...</span>
+                    </label>
+                </form>
+            </div>
+
+            <div class="field">
+                <div class="facebook-upload">
+                    <a href="#">Upload from <i class="icon-Facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="title">Uploaded photos:</div>
+                <div class="uploaded-photos"></div>
+            </div>
+        </div>
+
+        <script type="x-tmpl-mustache" id="uploaded-photo-item-template">
+            <div class="uploaded-photo-item">
+                <div class="uploaded-photo-box">
+                    <img src="img/1x1.png" alt="">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="icon">
+                    <span class="icon-Check-circle"><span class="path1"></span><span class="path2"></span></span>
+                </div>
+                <div class="input-quantity">
+                    <button>&#8722;</button>
+                    <span class="number">1</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </script>
+    </div>
+
+    <!-- The content of this block will be inserted into ".app-mobile-tab"  -->
+    <div id="mobile">
+        <div class="component-template sidebar-photo-component">
+            <div class="field">
+                <h3>Add photo(s)</h3>
+            </div>
+
+            <div class="field-actions justify-content-center">
+                <a href="#" class="btn btn-secondary">From Device</a>
+                <a href="#" class="btn btn-primary">From Facebook</a>
+            </div>
+
+            <div class="field"></div>
+
+            <div class="field">
+                <div class="title">Uploaded photos:</div>
+                <div class="uploaded-photos"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

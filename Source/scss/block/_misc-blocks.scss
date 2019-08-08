@@ -1,0 +1,188 @@
+.filters {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    letter-spacing: normal;
+    margin-bottom: 30px;
+
+    &-title {
+        align-items: center;
+        color: $grey;
+        display: flex;
+        font-size: $fs-smaller;
+        margin-right: 10px;
+    }
+
+    .dropdown {
+        margin-right: 9px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.drag-and-drop-area {
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px dashed #d1d1d1;
+    border-radius: 6px;
+    color: #333333;
+    height: 76px;
+
+    label {
+        cursor: pointer;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    &.dragover {
+        border-width: 2px;
+        background-color: $secondary-color;
+    }
+
+    .on-uploading {
+        display: none;
+    }
+
+    &.uploading {
+        &.dragover {
+            border-width: 1px;
+            background-color: inherit;
+        }
+        .choose-file {
+            display: none;
+        }
+        .drag-it-here {
+            display: none;
+        }
+        .on-uploading {
+            display: block;
+        }
+    }
+}
+
+.facebook-upload {
+    text-align: center;
+    font-weight: 700;
+    color: #4064AD;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+}
+
+.uploaded-photos {
+    display: flex;
+    flex-wrap: wrap;
+
+    .uploaded-photo-item {
+        position: relative;
+        margin-right: 5px;
+        margin-bottom: 8px;
+        cursor: pointer;
+
+        .uploaded-photo-box {
+            position: relative;
+            width: 71px;
+            height: 71px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border: 1px solid #ddd;
+            }
+
+            .progress {
+                position: absolute;
+                bottom: 5px;
+                left: 5px;
+                width: calc(100% - 10px);
+            }
+        }
+
+        .input-quantity {
+            margin-top: 5px;
+            display: none;
+        }
+
+        .icon {
+            display: none;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+
+            .icon-Check-circle {
+                font-size: 15px;
+            }
+        }
+
+        &.active {
+
+            .uploaded-photo-box {
+                border-color: $primary-color;
+            }
+
+            .icon {
+                display: block;
+            }
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.text-style {
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+        width: 45px;
+        height: 50px;
+        line-height: 50px;
+        background: $secondary-color;
+        color: $grey-text;
+
+        &.active {
+            color: $grey;
+        }
+
+        &.text-style-normal {
+            font-weight: normal;
+        }
+
+        &.text-style-bold {
+            font-weight: bold;
+        }
+
+        &.text-style-italic {
+            font-style: italic;
+        }
+
+        &:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+
+        &:last-child {
+            border-radius: 0 6px 6px 0;
+        }
+    }
+}
