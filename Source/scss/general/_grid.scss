@@ -1,0 +1,51 @@
+.d-flex {
+    display: flex;
+}
+
+.d-flex-item {
+    width: 100%;
+
+    &.width-25 {
+        width: 25%;
+    }
+
+    &.width-33 {
+        width: 33%;
+    }
+
+    &.width-40 {
+        width: 40%;
+    }
+
+    &.width-60 {
+        width: 60%;
+    }
+
+    &.width-67 {
+        width: 67%;
+    }
+
+    &.width-75 {
+        width: 75%;
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.right {
+        text-align: right;
+    }
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="308px" height="436px" viewBox="0 0 308 436" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Tempate</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="124" cy="124" r="124"></circle>
+    </defs>
+    <g id="Desktop-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.3_Topperoo_1024" transform="translate(-742.000000, -200.000000)">
+            <g id="Workspace" transform="translate(596.000000, 95.000000)">
+                <g id="Template" transform="translate(107.000000, 105.000000)">
+                    <g id="Tempate" transform="translate(39.000000, 0.000000)">
+                        <rect id="Rectangle-9" fill="#F7F7F7" fill-rule="nonzero" x="0" y="0" width="308" height="436" rx="3"></rect>
+                        <g id="dose-juice-1184455-unsplash" transform="translate(30.000000, 94.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" stroke="#CFCFCF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

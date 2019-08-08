@@ -1,0 +1,15 @@
+.input-quantity {
+    display: flex;
+    padding: 3px 8px;
+    background-color: $primary-color;
+    color: $white;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    font-weight: 600;
+
+    button {
+        color: inherit;
+        line-height: 1.1;
+    }
+}

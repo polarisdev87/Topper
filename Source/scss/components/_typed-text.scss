@@ -1,0 +1,37 @@
+.typed-text {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+        margin-right: 8px;
+        margin-bottom: 10px;
+
+
+        &.active {
+            .typed-text-box {
+                border-color: $primary-color;
+                color: $primary-color;
+            }
+        }
+
+        @include min991 {
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .typed-text-box {
+        width: 71px;
+        height: 71px;
+        line-height: 71px;
+        background: #F7F7F7;
+        border-radius: 3px;
+        font-size: 24px;
+        color: $grey-text;
+        border: $default-border;
+        text-align: center;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+}

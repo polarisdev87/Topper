@@ -1,0 +1,114 @@
+.app {
+    position: relative;
+    overflow: hidden;
+
+    @include min991 {
+        overflow: visible;
+    }
+
+    &-container {
+        @include min991 {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    &-sidebar {
+        box-shadow: $default-box-shadow;
+
+        @include min991 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 414px;
+            margin-right: 15px;
+        }
+
+        .scroll-sidebar {
+            height: inherit;
+            box-shadow: none;
+            position: relative;
+            padding: 30px;
+            margin-bottom: 30px;
+
+            @include min991 {
+                width: calc(100% - 118px);
+                border-radius: 0 3px 3px 0;
+                height: $app-container-height;
+                overflow-y: scroll;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-workspace {
+
+        @include min991 {
+            width: 600px;
+        }
+    }
+
+    &-mobile-tab {
+        position: absolute;
+        width: 100%;
+        padding: 40px 20px 20px;
+        top: 0;
+        bottom: 73px;
+        left: 0;
+        background-color: $white;
+        z-index: 100;
+        border-radius: 0 3px 3px 0;
+        max-height: 100vh;
+        overflow-y: scroll;
+        transform: translateY(1000%);
+        transition: transform 0.3s;
+
+        &:before {
+            display: block;
+            content: '';
+            width: 40px;
+            height: 4px;
+            background-color: $primary-color;
+            border-radius: 6px;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
+
+        &.open {
+            transform: translateY(0);
+            transition: transform 0.3s;
+        }
+
+        @include min991 {
+            display: none;
+        }
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 4px;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $primary-color;
+        border-radius: 3px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $primary-color;
+    }
+
+}

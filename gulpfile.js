@@ -1,146 +1,268 @@
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var map = require("map-stream");
+/* eslint import/no-unresolved: 0 */
 
-function replaceUrl1 () {
-    return map((file, cb) => {
-        let fileContents = file.contents.toString();
-        fileContents = fileContents.replace(/https:\/\/app\.topperoo\.test/g, 'https://fe.topperoo.com');
+const { series, parallel, src, dest, watch } = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const buffer = require('vinyl-buffer');
+const browserify = require('browserify');
+const bSync = require('browser-sync').create();
+const commonshake = require('common-shakeify');
+const csso = require('gulp-csso');
+const del = require('del');
+const env = require('gulp-env');
+const imagemin = require('gulp-imagemin');
+const packflat = require('browser-pack-flat');
+const pngquant = require('imagemin-pngquant');
+const process = require('process');
+const replace = require('gulp-replace');
+const resolve = require('resolve');
+const rigger = require('gulp-rigger');
+const sass = require('gulp-sass');
+const source = require('vinyl-source-stream');
+const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-terser');
+const watchify = require('watchify');
 
-        // eslint-disable-next-line
-        file.contents = Buffer.from(fileContents);
+let appOrigin = 'https://app.topperoo.com';
 
-        cb(null, file);
-    });
+if (process.env.APP_BASE_URL === undefined) {
+    // Only load .env if there is no existing environment variables
+    try {
+        env({
+            file: '.env',
+            type: 'ini',
+        });
+    }
+    catch (err) { /* Suppress errors */
+    }
 }
 
-function replaceUrl2 () {
-    return map((file, cb) => {
-        let fileContents = file.contents.toString();
-        fileContents = fileContents.replace(/https:\/\/app\.topperoo\.test/g, 'http://localhost:3000');
-
-        // eslint-disable-next-line
-        file.contents = Buffer.from(fileContents);
-
-        cb(null, file);
-    });
+if (process.env.APP_BASE_URL !== undefined) {
+    appOrigin = process.env.APP_BASE_URL;
 }
 
-gulp.task('copy', [ 'copy-fonts', 'copy-images', 'copy-schematics', 'copy-preview-frames' ]);
-gulp.task('build', [ 'css', 'js', 'js-admin', 'copy' ]);
-gulp.task('default', [ 'build' ]);
+function isDevelopMode () {
+    return process.env.NODE_ENV === 'development' || process.env.APP_ENV === 'development';
+}
 
-gulp.task('jshint', function() {
-    return gulp.src('./source/js/**/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
-});
+function getNPMPackageIds () {
+    // read package.json and get dependencies' package ids
+    let packageManifest = {};
+    try {
+        packageManifest = require('./package.json');
+    }
+    catch (e) {
+        // does not have a package.json manifest
+    }
+    return Object.keys(packageManifest.dependencies) || [];
+}
 
-gulp.task('css', function() {
-    return gulp.src('./source/scss/themes/**/main.scss')
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(postcss([ autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }) ]))
-        .pipe(replaceUrl2())
-        .pipe(gulp.dest('./public/css/'));
-});
+function reload (done) {
+    bSync.reload();
+    done();
+}
 
-gulp.task('js', function() {
-    return gulp.src([
-        './source/js/noConflictA.js',
-        './source/js/vendor/jQuery-2.2.4.min.js',
-        './source/js/noConflictB.js',
-        './source/js/vendor/jquery-ui-1.10.4.custom.min.js',
-        './source/js/vendor/mustache.min.js',
-        './source/js/vendor/raphael.min.js',
-        './source/js/vendor/base64.min.js',
-        './source/js/plugins.min.js',
-        './source/js/vendor/plugins/jquery.mCustomScrollbar.min.js',
-        './node_modules/svg.js/dist/svg.min.js',
-        './source/js/vendor/colors.js',
-        './source/js/modules/color_picker.js',
-        './source/js/modules/api.js',
-        './source/js/modules/config.js',
-        './source/js/modules/template.js',
-        './source/js/modules/editor.js',
-        './source/js/modules/dashboard.js',
-        './source/js/modules/design.js',
-        './source/js/modules/lightbox.js',
-        './source/js/modules/object.js',
-        './source/js/modules/order.js',
-        './source/js/modules/products.js',
-        './source/js/modules/storage.js',
-        './source/js/modules/utils.js',
-        './source/js/modules/viewport.js',
-        './source/js/app.js'
-    ]).pipe(concat('topperoo.js'))
-    .pipe(replaceUrl1())
-    .pipe(gulp.dest('./public/js/'));
-});
+function serve (done) {
+    bSync.init({
+        proxy: {
+            target: 'https://app.topperoo.test',
+            ws: true,
+        },
+        port: 8080,
+        online: false,
+        open: false,
+        reloadOnRestart: true,
+    });
+    done();
+}
 
-gulp.task('js-admin', function() {
-    return gulp.src([
-        './source/js/noConflictA.js',
-        './source/js/vendor/jQuery-2.2.4.min.js',
-        './source/js/noConflictB.js',
-        './source/js/vendor/jquery-ui-1.10.4.custom.min.js',
-        './source/js/vendor/mustache.min.js',
-        './source/js/vendor/raphael.min.js',
-        './source/js/vendor/base64.min.js',
-        './source/js/plugins.min.js',
-        './source/js/vendor/plugins/jquery.mCustomScrollbar.min.js',
-        './node_modules/svg.js/dist/svg.min.js',
-        './source/js/vendor/colors.js',
-        './source/js/modules/color_picker.js',
-        './source/js/admin/modules/config.js',
-        './source/js/admin/modules/utils.js',
-        './source/js/modules/api.js',
-        './source/js/modules/config.js',
-        './source/js/modules/template.js',
-        './source/js/modules/editor.js',
-        './source/js/modules/dashboard.js',
-        './source/js/modules/design.js',
-        './source/js/modules/lightbox.js',
-        './source/js/modules/object.js',
-        './source/js/modules/order.js',
-        './source/js/modules/products.js',
-        './source/js/modules/storage.js',
-        './source/js/modules/utils.js',
-        './source/js/modules/viewport.js',
-        './source/js/admin/app.js'
-    ]).pipe(concat('topperooadmin.js'))
-    .pipe(replaceUrl1())
-    .pipe(gulp.dest('./public/js/'));
-});
+function clean (done) {
+    return del([
+        './public/css',
+        './public/js',
+        './public/img',
+        './public/fonts',
+        './public/views',
+    ]);
+}
 
-gulp.task('copy-fonts', function () {
-    return gulp.src('./source/fonts/**/*')
-        .pipe(gulp.dest('./public/fonts/'));
-});
+function html () {
+    return src('./Source/views/**/[^_]*.html')
+        // Concat the markup
+        .pipe(rigger()).on('error', console.error)
 
-gulp.task('copy-images', function () {
-    return gulp.src('./source/img/**/*')
-        .pipe(gulp.dest('./public/img/'));
-});
+        // Output
+        .pipe(dest('./public/views'));
+}
 
-gulp.task('copy-schematics', function () {
-    return gulp.src('./source/schematics/**/*')
-        .pipe(gulp.dest('./public/schematics/'));
-});
+function jsVendor () {
+    let stream;
 
-gulp.task('copy-preview-frames', function () {
-    return gulp.src('./source/tpl_backgrounds/**/*')
-        .pipe(gulp.dest('./public/tpl_backgrounds/'));
-});
+    // Initialize browserify
+    let b = browserify({
+        debug: true,
+    });
 
-gulp.task('watch', function() {
-    gulp.watch('./source/js/**/*.js', [ 'jshint' ]);
-});
+    // Includes NPM packages on the bundle script
+    getNPMPackageIds().forEach(function (id) {
+        b.require(resolve.sync(id), { expose: id });
+    });
+
+    b.plugin(packflat);
+
+    // Build and save into public folder
+    stream = b
+        .bundle().on('error', console.error)
+        .pipe(source('vendor.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }));
+
+    // Minify
+    if (!isDevelopMode()) {
+        stream.pipe(uglify({ safari10: true }));
+    }
+
+    return stream
+        .pipe(sourcemaps.write('./'))
+        .pipe(dest('./public/js/'));
+}
+
+function jsLoader () {
+    let stream;
+    stream = src(['./Source/js/loader.js'])
+        .pipe(replace('{{APP_BASE_URL}}', appOrigin))
+        .pipe(sourcemaps.init())
+        .pipe(babel({ presets: ['@babel/env'] }));
+
+    if (!isDevelopMode()) {
+        stream.pipe(uglify({ safari10: true, mangle: false, compress: false }));
+    }
+
+    return stream.pipe(sourcemaps.write('./'))
+        .pipe(dest('./public/js/'));
+}
+
+function jsApp (done, watching) {
+    // Initialize browserify
+    let b = browserify({
+        entries: 'Source/js/main.js',
+        debug: true,
+        cache: {},
+        packageCache: {},
+    });
+
+    // Create bundle function
+    let bundle = () => {
+        let stream;
+
+        stream = b
+            .bundle().on('error', console.error)
+            .pipe(source('topperoo.js'))
+            .pipe(buffer())
+            .pipe(sourcemaps.init({ loadMaps: true }));
+
+        // Minify
+        if (!isDevelopMode()) {
+            stream.pipe(uglify({ safari10: true }));
+        }
+
+        console.log('    ---    Create JS bundle');
+
+        return stream
+            .pipe(sourcemaps.write('./'))
+            .pipe(dest('./public/js/'));
+    };
+
+    // Excludes NPM packages from the bundle script
+    getNPMPackageIds().forEach(function (id) {
+        b.external(id);
+    });
+
+    // Convert ES6 syntax to ES5 syntax
+    b.transform('babelify', { presets: ['@babel/preset-env'] });
+
+    // Replace all 'process.env.VAR' call in the source code into the value of VAR (actual string)
+    b.transform('envify', { _: 'purge' });
+
+    // Optimization
+    b.plugin(commonshake);
+    b.plugin(packflat);
+
+    // If file watching is true
+    if (typeof watching !== 'undefined' && watching === true) {
+        b.plugin(watchify, { poll: 1200 });
+        b.on('update', () => {
+            bundle().on('end', () => bSync.reload());
+        });
+    }
+
+    // Build and save to public  folder
+    return bundle();
+}
+
+function css () {
+    let stream;
+    stream = src('./Source/scss/**/[^_]*.scss')
+        // Replace variables with value from environment variables
+        .pipe(replace(/\$app-base-url:.*;/, `\$app-base-url: "${appOrigin}";`))
+
+        // Initialize sourcemaps
+        .pipe(sourcemaps.init())
+
+        // Compile sass
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+
+        // Auto-prefix css styles for cross browser compatibility
+        .pipe(autoprefixer());
+
+    if (!isDevelopMode()) {
+        // Minify css
+        stream.pipe(csso({ restructure: false }));
+    }
+
+    stream = stream
+        // Write sourcemaps to file
+        .pipe(sourcemaps.write('./'))
+
+        // Output
+        .pipe(dest('./public/css/'))
+
+        // Send to browser-sync
+        .pipe(bSync.stream());
+
+    return stream;
+}
+
+function images () {
+    return src('./Source/img/**/*.*').pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{ removeViewBox: false }],
+        use: [pngquant()],
+        interlaced: true,
+    }))
+        .pipe(dest('./public/img'));
+}
+
+function fonts () {
+    return src('./Source/fonts/**/*').pipe(dest('./public/fonts/'));
+}
+
+function watchCss () {
+    return watch(['Source/scss/**/*'], { usePolling: true, interval: 1200 }, series(css));
+}
+
+function watchHtml () {
+    return watch(['Source/views/**/*'], { usePolling: true, interval: 1200 }, series(html, reload));
+}
+
+function watchJs (done) {
+    return jsApp(done, true);
+}
+
+let compileAll = parallel(fonts, images, html, css, jsVendor, jsLoader, jsApp);
+let watchAll = parallel(watchCss, watchHtml, watchJs);
+
+exports.default = series(clean, compileAll);
+exports.watch = series(clean, compileAll, watchAll);
+exports.browsersync = series(clean, compileAll, serve, watchAll);
+exports.js = parallel(jsVendor, jsLoader, jsApp);

@@ -1,0 +1,46 @@
+// Put replaceable variables here. Because if we put them in _variables.scss, gulp+sass won't replace these vars during compile.
+// App base url.
+$app-base-url: 'https://app.topperoo.com';
+
+// Compass
+@import "../../node_modules/compass-mixins/lib/compass";
+@import "../../node_modules/compass-mixins/lib/compass/reset";
+// Base styles
+@import 'general/variables';
+@import 'general/fonts';
+@import 'general/mixins';
+@import 'general/misc';
+@import 'general/base';
+@import 'general/grid';
+// Component styles
+@import "components/badges";
+@import "components/box";
+@import "components/buttons";
+@import "components/checkbox";
+@import "components/colors-block";
+@import "components/dropdown";
+@import "components/input";
+@import "components/input-quantity";
+@import "components/modal-popup";
+@import "components/radio";
+@import "components/range";
+@import "components/layer-tools";
+@import "components/tabs";
+@import "components/tooltips";
+@import "components/typed-text";
+@import "components/pagination";
+@import 'components/pattern-images';
+@import 'components/progress-bar';
+// Block styles
+@import 'block/header';
+@import 'block/templates';
+@import 'block/sidebar';
+@import 'block/top-panel';
+@import 'block/workspace';
+@import 'block/field';
+@import 'block/footer';
+@import 'block/misc-blocks';
+@import 'block/modal';
+// Layout styles
+@import "layout/app";
+@import "layout/loader";

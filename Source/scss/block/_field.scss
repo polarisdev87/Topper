@@ -1,0 +1,112 @@
+.field {
+    margin-bottom: $space-base;
+
+    h3 {
+        font-size: 14px;
+        color: $grey;
+        margin-bottom: $space-base;
+
+        &.mb20 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .title {
+        color: $grey;
+        margin-bottom: 20px;
+
+        &.mb10 {
+            margin-bottom: 10px;
+        }
+
+        .custom-checkbox {
+            margin-left: 10px;
+        }
+    }
+
+    .title-small {
+        color: $grey;
+        margin-bottom: 10px;
+        font-size: 10px;
+
+        a {
+            color: inherit;
+
+            i {
+                border-color: $grey;
+            }
+        }
+    }
+
+    .sheet {
+        display: inline-block;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        &.active {
+            svg {
+                g {
+                    fill: $primary-color;
+                    opacity: 1;
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    .shape {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        margin-right: $space-base;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.shape-rect {
+            border: 1px solid #d7d7d7;
+            border-radius: 3px;
+        }
+
+        &.shape-circle {
+            border: 1px solid #d7d7d7;
+            border-radius: 50%;
+        }
+
+        &.shape-heart {
+            &.active {
+                background: transparent;
+                border: none;
+            }
+        }
+
+        &.active {
+            background: $secondary-color;
+            border-color: $primary-color;
+
+            svg {
+                g {
+                    opacity: 1;
+                    fill: $secondary-color;
+                    stroke: $primary-color
+                }
+            }
+        }
+    }
+}
+
+.field-actions {
+    display: flex;
+    align-items: center;
+
+    .btn {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

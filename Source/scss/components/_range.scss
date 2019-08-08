@@ -1,0 +1,128 @@
+.custom-range, .range-buttons {
+    position: relative;
+
+    .number-indicator {
+        position: absolute;
+        top: 0;
+        left: 45.5%;
+        transform: translateY(-50%);
+
+        .indicator {
+            font-size: 10px;
+            color: $grey;
+        }
+
+        button {
+            opacity: 0;
+            color: $primary-color;
+        }
+    }
+
+    &:hover {
+        button {
+            opacity: 1;
+        }
+    }
+
+
+    input[type=range] {
+        -webkit-appearance: none;
+        margin: 18px 0;
+        width: 100%;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        border: 0.2px solid $border-color;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: $primary-color;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+    }
+
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        border: 0.2px solid $border-color;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: $primary-color;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+    }
+
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        border: 0.2px solid $border-color;
+    }
+
+    input[type=range]::-ms-thumb {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: $primary-color;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+        background: $primary-color;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+        background: $primary-color;
+    }
+}
+
+.range-buttons {
+    position: relative;
+    color: $primary-color;
+
+    input[type=range]::-webkit-slider-runnable-track {
+        padding: 0 20px;
+    }
+
+    button {
+        position: absolute;
+        top: 12px;
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        right: 0;
+    }
+
+    .icon-Left-side .path1:before {
+        content: "\e90f";
+        color: $primary-color;
+    }
+
+    .icon-Right-side .path1:before {
+        content: "\e90f";
+        color: $primary-color;
+    }
+}

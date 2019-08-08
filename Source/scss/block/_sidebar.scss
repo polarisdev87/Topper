@@ -1,0 +1,161 @@
+.main-sidebar {
+    width: 100%;
+    height: inherit;
+    background-color: $white;
+    border-radius: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: -2px -2px 8px 0 rgba(222, 222, 222, 0.35);
+
+
+    @include min991 {
+        width: 118px;
+        padding-bottom: 60px;
+        border-right: 1px solid #ededed;
+        border-radius: 3px 0 0 3px;
+        text-align: center;
+        height: $app-container-height;
+        position: relative;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+    @include min768 {
+        border-radius: 3px;
+    }
+
+    & > ul {
+        display: flex;
+
+        @include min991 {
+            display: block;
+        }
+
+        & > li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+
+            @include min991 {
+                border-left: 3px solid transparent;
+                border-bottom: none;
+            }
+
+            &.active {
+                border-color: $primary-color;
+
+                & > a {
+                    background: $secondary-color;
+                    color: $primary-color;
+                }
+            }
+
+            &:hover {
+                border-color: $primary-color;
+            }
+
+            & > a {
+                display: block;
+                font-size: $fs-smaller;
+                color: $grey-text;
+                padding: 14px 15px;
+                font-weight: 600;
+                line-height: 1.2;
+                height: 70px;
+
+                @include min991 {
+                    padding: 40px 15px;
+                    height: auto;
+                }
+
+                &:hover {
+                    background: $secondary-color;
+                }
+
+                i {
+                    font-size: 17px;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .sub-menu {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        background-color: $white;
+        width: 100%;
+        display: none;
+
+        &.open {
+            display: block;
+        }
+
+        &.open-desktop {
+            @include min991 {
+                display: block;
+            }
+        }
+
+        @include min991 {
+            position: relative;
+        }
+
+        li {
+
+
+            &.active {
+                a {
+                    color: $primary-color;
+                    background-color: $secondary-color;
+                    border-color: $primary-color;
+                    border-top: 1px solid $orange;
+
+                    @include min991 {
+                        border-top: none;
+                        background-color: inherit;
+                    }
+                }
+            }
+
+            a {
+                align-items: center;
+                border-bottom: $default-border;
+                color: $grey-text;
+                display: flex;
+                justify-content: center;
+                padding: 15px 0;
+
+                @include min991 {
+                    border-bottom: none;
+                }
+
+                &:hover {
+                    background: $secondary-color;
+                }
+            }
+
+            [class^="icon-"],
+            [class*=" icon-"] {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .copyright {
+        display: none;
+
+        @include min991 {
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            font-size: 8px;
+        }
+    }
+}

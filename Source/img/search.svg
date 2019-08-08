@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3_Topperoo_DesignLibrary_1024" transform="translate(-541.000000, -130.000000)" fill="#C7C7C7" fill-rule="nonzero">
+            <g id="Sidebar" transform="translate(171.000000, 95.000000)">
+                <g id="Scroll-sidebar" transform="translate(148.000000, 32.000000)">
+                    <g id="Search-field">
+                        <g id="search" transform="translate(222.000000, 3.000000)">
+                            <path d="M9.625,8.96875 L7.75,7.09375 C9.25,5.25 8.9375,2.53125 7.09375,1.03125 C5.25,-0.46875 2.5,-0.1875 1,1.65625 C-0.5,3.5 -0.1875,6.25 1.65625,7.71875 C3.25,9 5.46875,9 7.0625,7.71875 L8.9375,9.59375 C9.125,9.78125 9.40625,9.78125 9.59375,9.59375 C9.78125,9.40625 9.8125,9.125 9.625,8.96875 L9.625,8.96875 L9.625,8.96875 Z M4.375,7.75 C2.5,7.75 1,6.21875 1,4.375 C1,2.5 2.5,1 4.375,1 C6.25,1 7.75,2.5 7.75,4.375 C7.75,4.375 7.75,4.375 7.75,4.375 C7.75,6.21875 6.21875,7.75 4.375,7.75 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
