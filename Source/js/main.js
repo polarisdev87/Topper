@@ -16,6 +16,7 @@ const referrer = document.referrer.split('/')[0] + '//' + document.referrer.spli
 
 // Store the environment variables value into cache. Don't want to call `process.env` in other files.
 cache.set('APP_BASE_URL', process.env.APP_BASE_URL);
+cache.set('APP_API_URL', process.env.APP_API_URL);
 
 // Store dashboard's sections selector in cache
 cache.set('$document', $(document));
