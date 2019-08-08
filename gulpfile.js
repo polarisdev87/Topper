@@ -32,6 +32,12 @@ if (process.env.APP_BASE_URL === undefined) {
             file: '.env',
             type: 'ini',
         });
+        
+        // Load env from parent directory (back-end app). Env sets on back-end have higher priority
+        env({
+            file: '../.env',
+            type: 'ini',
+        })
     }
     catch (err) { /* Suppress errors */
     }
