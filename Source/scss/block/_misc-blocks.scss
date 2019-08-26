@@ -29,15 +29,16 @@
     border-radius: 6px;
     color: #333333;
     height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    label {
-        cursor: pointer;
-        display: flex;
-        height: 100%;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
+    .drag-and-drop-wrapper {
         text-align: center;
+        svg {
+            width: 30px;
+            height: 24px;
+        }
     }
 
     input[type="file"] {
@@ -49,8 +50,36 @@
         background-color: $secondary-color;
     }
 
+    .choose-file {
+        margin-top: 5px;
+        display: block;
+        & > span:nth-child(3) {
+            display: none;
+        }
+        &:hover {
+            cursor: pointer;
+            strong {
+                color: #39bfd3;
+            }
+        }
+    }
+
     .on-uploading {
         display: none;
+    }
+
+    &.upload-more {
+        svg{
+            display: none;
+        }
+        .choose-file {
+            & > span:nth-child(2) {
+                display: none;
+            }
+            & > span:nth-child(3) {
+                display: block;
+            }
+        }
     }
 
     &.uploading {
@@ -58,10 +87,10 @@
             border-width: 1px;
             background-color: inherit;
         }
-        .choose-file {
+        svg{
             display: none;
         }
-        .drag-it-here {
+        .choose-file {
             display: none;
         }
         .on-uploading {
