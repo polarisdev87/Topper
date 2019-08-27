@@ -24,7 +24,8 @@
 
 .drag-and-drop-area {
     width: 232px;
-    height: 79px;
+    // height: 79px;
+    padding: 22px 0 22px 0;
     border-radius: 6px;
     border: dashed 1px #d1d1d1;
     color: #333333;
@@ -52,7 +53,6 @@
 
     .choose-file {
         display: block;
-        width: 97px;
         margin-top: 5px;
         line-height: 1.29;
         font-weight: normal;
