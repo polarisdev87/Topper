@@ -20,6 +20,11 @@ export default function DnDUploader () {
         $input = $form.find('input[type="file"]').eq(0);
         $gallery = $photoPanel.find('.uploaded-photos').eq(0);
 
+        $form.removeClass("upload-more");
+        if($gallery.children().length == 0) {
+            $photoPanel.find(".title").eq(0).hide();
+        }
+
         bindEvents();
     }
 
@@ -125,6 +130,7 @@ export default function DnDUploader () {
             },
             complete: () => {
                 checkIfDone();
+                $form.addClass('upload-more');
                 setTimeout(removeProgressBar, 500, $galleryItem);
             },
             success: () => {
@@ -132,6 +138,8 @@ export default function DnDUploader () {
             },
             error: () => {
                 $galleryItem.remove();
+                if($gallery.children().length == 0)
+                    $photoPanel.find(".title").eq(0).hide();
             },
         });
     }
@@ -148,6 +156,7 @@ export default function DnDUploader () {
         let $galleryItem;
         let template = $scrollSidebar.find('#uploaded-photo-item-template').html();
 
+        $photoPanel.find(".title").eq(0).show();
         mustache.parse(template);
         $galleryItem = $(mustache.render(template));
         $gallery.append($galleryItem);
