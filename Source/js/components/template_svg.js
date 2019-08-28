@@ -13,7 +13,7 @@ import { SVG } from '@svgdotjs/svg.js';
  *      "HorizontalSpacing": 0.37,
  *      "TopperHeight": 3.5,
  *      "TopperWidth": 3.5,
- *      "Matrix": "[[1,1],[1,1]]",
+ *      "Matrix": "r4c4,r2c2",
  *      "TopperShape": "round",
  *  }
  */
@@ -34,7 +34,7 @@ export default function TemplateSVG (tplData) {
      */
     function drawEntireSheet (config) {
 
-        let resolution, width, height, svg, paper, mask, paperMask, topperMask, cx, cy;
+        let resolution, width, height, svg, paper, mask, paperMask, topperMask, cx, cy, columns, rows;
 
         if (config.width) {
             resolution = config.width / tplData['Width'];
@@ -71,23 +71,25 @@ export default function TemplateSVG (tplData) {
 
         mask.add(paperMask);
 
-        for (let x = 0; x < tplData['Matrix'].length; x++) {
-            for (let y = 0; y < tplData['Matrix'][0].length; y++) {
-                if (tplData['Matrix'][x][y] == 0) {
-                    continue;
+        // Only get the first data (index 0)
+        columns = tplData['Matrix'].split(",")[0].split('c')[1];
+        rows = tplData['Matrix'].split(",")[0].split('c')[0].split('r')[1];
+
+        if (columns !== undefined && rows !== undefined) {
+            for (let x = 0; x < rows; x++) {
+                for (let y = 0; y < columns; y++) {
+                    cx = tplData['MarginLeft'];
+                    cx += y * (tplData['TopperWidth'] + tplData['HorizontalSpacing']);
+                    cx += tplData['TopperWidth'] / 2;
+                    cx *= resolution;
+
+                    cy = tplData['MarginTop'];
+                    cy += x * (tplData['TopperHeight'] + tplData['VerticalSpacing']);
+                    cy += tplData['TopperHeight'] / 2;
+                    cy *= resolution;
+
+                    mask.add(topperMask.clone().center(cx, cy));
                 }
-
-                cx = tplData['MarginLeft'];
-                cx += y * (tplData['TopperWidth'] + tplData['HorizontalSpacing']);
-                cx += tplData['TopperWidth'] / 2;
-                cx *= resolution;
-
-                cy = tplData['MarginTop'];
-                cy += x * (tplData['TopperHeight'] + tplData['VerticalSpacing']);
-                cy += tplData['TopperHeight'] / 2;
-                cy *= resolution;
-
-                mask.add(topperMask.clone().center(cx, cy));
             }
         }
 
