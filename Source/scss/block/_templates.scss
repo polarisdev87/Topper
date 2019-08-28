@@ -89,3 +89,13 @@
     }
 }
 
+.create-template {
+    line-height: normal;
+    & > .field:nth-child(3) {
+        font-size: 0px;
+        .title{
+            font-size: $fs-base;
+            letter-spacing: 0.69px;
+        }
+    }
+}
