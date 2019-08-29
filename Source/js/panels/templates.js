@@ -54,6 +54,9 @@ export default function TemplatesPanel () {
             $templateComponent.find('.btn-secondary.btn-block').on('click', createTemplateClicked);
             $templateComponent.find('.template-item').on('click', templateItemClicked);
 
+            //Add Event Listener for Input range
+            $templateComponent.find('input[type=range]').on("input", inputRangeChagned);
+
             // Set flag if DOM listener is already attached
             hasDomEventListener = true;
         }
@@ -62,6 +65,10 @@ export default function TemplatesPanel () {
     function triggerDOMEvents () {
         let $templateComponent = $scrollSidebar.find('.sidebar-templates-component').eq(0);
         $templateComponent.find('.nav-link').eq(0).trigger('click');
+    }
+
+    function inputRangeChagned (event) {
+        let rangeIndicator = $(event.currentTarget).parent().find(".indicator").text($(this).val());
     }
 
     function templateItemClicked (event) {
