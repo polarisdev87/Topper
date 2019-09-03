@@ -1,4 +1,5 @@
 .field {
+    font-size: 0px;
     margin-bottom: $space-base;
 
     h3 {
@@ -13,6 +14,7 @@
 
     .title {
         color: $grey;
+        font-size: 12px;
         margin-bottom: 20px;
 
         &.mb10 {
@@ -36,6 +38,10 @@
                 border-color: $grey;
             }
         }
+    }
+
+    & > .input-group:nth-child(2) {
+        margin-bottom: 13px;
     }
 
     .sheet {
