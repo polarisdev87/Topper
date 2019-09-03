@@ -1,15 +1,16 @@
 .custom-range, .range-buttons {
     position: relative;
+    padding-top: 24px;
 
     .number-indicator {
         position: absolute;
-        top: 0;
+        top: 5px;
         left: 45.5%;
-        transform: translateY(-50%);
 
         .indicator {
             font-size: 10px;
             color: $grey;
+            line-height: normal;
         }
 
         button {
@@ -27,7 +28,8 @@
 
     input[type=range] {
         -webkit-appearance: none;
-        margin: 18px 0;
+        // margin: 18px 0;
+        padding: 7.5px 0px 7.5px 0px;
         width: 100%;
     }
 
