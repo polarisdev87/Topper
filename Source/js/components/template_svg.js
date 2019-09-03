@@ -33,8 +33,9 @@ export default function TemplateSVG (tplData) {
      *  @return SVG object
      */
     function drawEntireSheet (config) {
-
-        let resolution, width, height, svg, paper, mask, paperMask, topperMask, cx, cy, columns, rows;
+        let resolution, width, height, svg, paper, mask, paperMask, topperMask, cx, cy;
+        let cols, rows;
+        let matrixParts = tplData['Matrix'].split(",");
 
         if (config.width) {
             resolution = config.width / tplData['Width'];
@@ -58,13 +59,13 @@ export default function TemplateSVG (tplData) {
         switch (tplData['TopperShape']) {
             case 'round':
                 topperMask = svg.circle(
-                    tplData['TopperWidth'] * resolution,
+                    tplData['TopperWidth'] * resolution
                 ).fill('#000');
                 break;
             case 'rectangular':
                 topperMask = svg.rect(
                     tplData['TopperWidth'] * resolution,
-                    tplData['TopperHeight'] * resolution,
+                    tplData['TopperHeight'] * resolution
                 ).fill('#000');
                 break;
         }
@@ -72,12 +73,12 @@ export default function TemplateSVG (tplData) {
         mask.add(paperMask);
 
         // Only get the first data (index 0)
-        columns = tplData['Matrix'].split(",")[0].split('c')[1];
-        rows = tplData['Matrix'].split(",")[0].split('c')[0].split('r')[1];
+        cols = matrixParts[0].split('c')[1];
+        rows = matrixParts[0].split('c')[0].split('r')[1];
 
-        if (columns !== undefined && rows !== undefined) {
+        if (cols !== undefined && rows !== undefined) {
             for (let x = 0; x < rows; x++) {
-                for (let y = 0; y < columns; y++) {
+                for (let y = 0; y < cols; y++) {
                     cx = tplData['MarginLeft'];
                     cx += y * (tplData['TopperWidth'] + tplData['HorizontalSpacing']);
                     cx += tplData['TopperWidth'] / 2;
