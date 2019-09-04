@@ -1,6 +1,6 @@
 .custom-range, .range-buttons {
     position: relative;
-    padding-top: 24px;
+    padding-top: 26px;
 
     .number-indicator {
         position: absolute;
@@ -28,8 +28,7 @@
 
     input[type=range] {
         -webkit-appearance: none;
-        // margin: 18px 0;
-        padding: 7.5px 0px 7.5px 0px;
+        padding: 7px 0px 7px 0px;
         width: 100%;
     }
 
