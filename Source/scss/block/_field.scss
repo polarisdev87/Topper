@@ -49,6 +49,20 @@
         margin-right: 30px;
         margin-bottom: 20px;
         cursor: pointer;
+        position: relative;
+
+        div{
+            position: absolute;
+            z-index: 100;
+            top: 11px;
+            left: 11px;
+            width: 17px;
+            text-align: center;
+            font-size: 10px;
+            opacity: 0.2;
+            font-family: ProximaNova;
+        }
+
 
         &.active {
             svg {
@@ -57,6 +71,10 @@
                     opacity: 1;
                     background-color: $secondary-color;
                 }
+            }
+            div{
+                color: $primary-color;
+                opacity: 1;
             }
         }
     }

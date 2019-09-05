@@ -8,6 +8,7 @@ export default function TemplatesPanel () {
     const $scrollSidebar = cache.get('$scrollSidebar');
 
     let hasDomEventListener = false;
+    let $templateComponent;
 
     function onSidebarLayoutMenuClicked () {
         let appBaseUrl = cache.get('APP_API_URL');
@@ -48,7 +49,7 @@ export default function TemplatesPanel () {
     }
 
     function listenDOMEvents () {
-        let $templateComponent = $scrollSidebar.find('.sidebar-templates-component').eq(0);
+        $templateComponent = $scrollSidebar.find('.sidebar-templates-component').eq(0);
         if (!hasDomEventListener) {
             $templateComponent.find('.nav-link').on('click', navLinkClicked);
             $templateComponent.find('.btn-secondary.btn-block').on('click', createTemplateClicked);
@@ -56,6 +57,10 @@ export default function TemplatesPanel () {
 
             //Add Event Listener for Input range
             $templateComponent.find('input[type=range]').on("input", inputRangeChagned);
+            //Add Event Listener for Sheet Size
+            $templateComponent.find('.sheet').on("click", sheetSizeClicked);
+            //Add Event Listener for Shape 
+            $templateComponent.find('.shape').on("click", templateShapeClicked);
 
             // Set flag if DOM listener is already attached
             hasDomEventListener = true;
@@ -63,12 +68,21 @@ export default function TemplatesPanel () {
     }
 
     function triggerDOMEvents () {
-        let $templateComponent = $scrollSidebar.find('.sidebar-templates-component').eq(0);
         $templateComponent.find('.nav-link').eq(0).trigger('click');
     }
 
     function inputRangeChagned (event) {
         let rangeIndicator = $(event.currentTarget).parent().find(".indicator").text($(this).val());
+    }
+
+    function sheetSizeClicked (event) {
+        $templateComponent.find(".sheet").removeClass("active");
+        let sheet = $(event.currentTarget).addClass("active");
+    }
+
+    function templateShapeClicked (event) {
+        $templateComponent.find(".shape").removeClass("active");
+        let sheet = $(event.currentTarget).addClass("active");
     }
 
     function templateItemClicked (event) {
