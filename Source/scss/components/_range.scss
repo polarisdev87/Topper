@@ -1,22 +1,19 @@
 .custom-range, .range-buttons {
     position: relative;
     padding-top: 26px;
+    outline: none;
 
     .number-indicator {
+        width: 28px;
+        color: $grey;
+        font-size: 10px;
+        font-weight: 600;
         position: absolute;
-        top: 5px;
-        left: 45.5%;
-
-        .indicator {
-            font-size: 10px;
-            color: $grey;
-            line-height: normal;
-        }
-
-        button {
-            opacity: 0;
-            color: $primary-color;
-        }
+        top: 10px;
+        left: 0;
+        line-height: normal;
+        text-align: center;
+        transform: translateX(-12px);
     }
 
     &:hover {
@@ -28,7 +25,7 @@
 
     input[type=range] {
         -webkit-appearance: none;
-        padding: 7px 0px 7px 0px;
+        padding: 7px 0;
         width: 100%;
     }
 
