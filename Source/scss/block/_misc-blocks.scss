@@ -46,8 +46,8 @@
     }
 
     &.dragover {
-        border-width: 2px;
-        background-color: lightgrey;
+        background-color: #EEE;
+        transition: all 0.3s;
     }
 
     .choose-file {
@@ -58,7 +58,7 @@
         &:hover {
             cursor: pointer;
             strong {
-                color: #39bfd3;
+                color: $primary-color;
             }
         }
     }
