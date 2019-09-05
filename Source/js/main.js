@@ -34,7 +34,7 @@ cache.set('$loader', $('#loader'));
 // Wrap register components into function and will executed when CONFIG ready
 function registerComponents () {
     mediator.addComponent('main_menu', SideBar());
-    mediator.addComponent('template_panel', TemplatesPanel());
+    mediator.addComponent('templates_panel', TemplatesPanel());
     mediator.addComponent('library_panel', LibraryPanel());
     mediator.addComponent('photo_panel', PhotoPanel());
     mediator.addComponent('text_panel', TextPanel());
