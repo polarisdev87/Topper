@@ -74,7 +74,6 @@ export default function TemplatesPanel ()
     function triggerDOMEvents ()
     {
         $templateComponent.find(".nav-link").eq(0).trigger("click");
-        $templateComponent.find("input[type=range]").trigger("input");
     }
 
     function inputRangeChanged ()
@@ -151,6 +150,7 @@ export default function TemplatesPanel ()
         event.preventDefault();
         $scrollSidebar.find('.template-list').removeClass('active');
         $scrollSidebar.find('.create-template').addClass('active');
+        $templateComponent.find("input[type=range]").trigger("input");
     }
 
     return {
