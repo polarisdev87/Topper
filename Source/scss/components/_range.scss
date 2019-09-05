@@ -6,33 +6,17 @@
         position: absolute;
         top: 5px;
         left: 45.5%;
+        font-size: 10px;
+        color: $grey;
+        line-height: normal;
+        transform: translateX(10px);
 
-        .indicator {
-            font-size: 10px;
-            color: $grey;
-            line-height: normal;
-        }
-
-        button {
-            opacity: 0;
-            color: $primary-color;
-        }
     }
-
-    &:hover {
-        button {
-            opacity: 1;
-        }
-    }
-
 
     input[type=range] {
         -webkit-appearance: none;
         padding: 7px 0px 7px 0px;
         width: 100%;
-    }
-
-    input[type=range]:focus {
         outline: none;
     }
 
@@ -50,6 +34,7 @@
         background: $primary-color;
         cursor: pointer;
         -webkit-appearance: none;
+        border: 0;
         margin-top: -7px;
     }
 
@@ -67,6 +52,7 @@
         background: $primary-color;
         cursor: pointer;
         -webkit-appearance: none;
+        border: 0;
         margin-top: -7px;
     }
 

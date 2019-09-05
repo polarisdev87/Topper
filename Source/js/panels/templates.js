@@ -56,7 +56,7 @@ export default function TemplatesPanel () {
             $templateComponent.find('.template-item').on('click', templateItemClicked);
 
             //Add Event Listener for Input range
-            $templateComponent.find('input[type=range]').on("input", inputRangeChagned);
+            $templateComponent.find('input[type=range]').on("input", inputRangeChanged);
             //Add Event Listener for Sheet Size
             $templateComponent.find('.sheet').on("click", sheetSizeClicked);
             //Add Event Listener for Shape 
@@ -71,13 +71,15 @@ export default function TemplatesPanel () {
         $templateComponent.find('.nav-link').eq(0).trigger('click');
     }
 
-    function inputRangeChagned (event) {
+    function inputRangeChanged (event) {
         let parentNode = $(event.currentTarget).parent();
         let currentValue = parseFloat($(this).val());
         let max = parseFloat($(this).attr("max"));
         let min = parseFloat($(this).attr("min"));
         let parentWidth = parentNode.width();
-        let textWidth = parentNode.find(".indicator").width();
+        let textWidth = parentNode.find(".number-indicator").width();
+
+        console.log(textWidth);
 
         let left = (((currentValue - min) / (max - min)) * parentWidth) - (textWidth / 2);
         let rangeIndicatorText = $(event.currentTarget).parent().find(".indicator").text(currentValue);
