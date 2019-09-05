@@ -32,6 +32,12 @@
             padding: 30px;
             margin-bottom: 30px;
 
+            /*
+                For Firefox customized sidebar
+            */
+            scrollbar-width: thin;
+            scrollbar-color: $primary-color #fff;
+
             @include min991 {
                 width: calc(100% - 118px);
                 border-radius: 0 3px 3px 0;
