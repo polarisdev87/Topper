@@ -72,7 +72,16 @@ export default function TemplatesPanel () {
     }
 
     function inputRangeChagned (event) {
-        let rangeIndicator = $(event.currentTarget).parent().find(".indicator").text($(this).val());
+        let parentNode = $(event.currentTarget).parent();
+        let currentValue = parseFloat($(this).val());
+        let max = parseFloat($(this).attr("max"));
+        let min = parseFloat($(this).attr("min"));
+        let parentWidth = parentNode.width();
+        let textWidth = parentNode.find(".indicator").width();
+
+        let left = (((currentValue - min) / (max - min)) * parentWidth) - (textWidth / 2);
+        let rangeIndicatorText = $(event.currentTarget).parent().find(".indicator").text(currentValue);
+        let rangeIndicator = $(event.currentTarget).parent().find(".number-indicator").css("left", left + "px");
     }
 
     function sheetSizeClicked (event) {
