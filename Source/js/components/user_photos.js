@@ -4,7 +4,7 @@ export default function UserPhotos () {
     const userPhotosStorageKey = 'tpr_user_photos';
 
     function get() {
-        return localStorage.get(userPhotosStorageKey, []);
+        return localStorage.getItem(userPhotosStorageKey, []);
     }
 
     function add(fileName) {

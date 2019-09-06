@@ -28,7 +28,26 @@
 
             <div class="field">
                 <div class="title uploaded-photos-title">Uploaded photos:</div>
-                <div class="uploaded-photos"></div>
+                <div class="uploaded-photos">
+                    {{#photos}}
+                    <div class="uploaded-photo-item">
+                        <div class="uploaded-photo-box">
+                            <img {{{photo_file}}} alt="">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <span class="icon-Check-circle"><span class="path1"></span><span class="path2"></span></span>
+                        </div>
+                        <div class="input-quantity">
+                            <button>&#8722;</button>
+                            <span class="number">1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    {{/photos}}
+                </div>
             </div>
         </div>
 
