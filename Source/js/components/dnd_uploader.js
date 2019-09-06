@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import mustache from 'mustache';
 import cache from '../cache';
+import UserPhotos from './user_photos';
 
 export default function DnDUploader () {
     const $scrollSidebar = cache.get('$scrollSidebar'),
@@ -131,8 +132,13 @@ export default function DnDUploader () {
                 checkIfDone();
                 setTimeout(removeProgressBar, 500, $galleryItem);
             },
-            success: () => {
-                previewFile(file, $galleryItem);
+            success: (data) => {
+                let userImages = [];
+                if (typeof data.status !== 'undefined' && data.status === 'success') {
+                    previewFile(file, $galleryItem);
+
+                    UserPhotos().add(data.data.Image.FileName);
+                }
             },
             error: () => {
                 $galleryItem.remove();
