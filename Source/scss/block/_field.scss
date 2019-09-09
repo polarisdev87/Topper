@@ -51,7 +51,7 @@
         cursor: pointer;
         position: relative;
 
-        div{
+        div {
             position: absolute;
             z-index: 100;
             top: 11px;
@@ -59,7 +59,13 @@
             width: 17px;
             text-align: center;
             font-size: 10px;
+            color: #333333;
             opacity: 0.2;
+            &.shape-text {
+                top: 18px;
+                left: 10px;
+                font-size: 14px;
+            }
         }
 
 
